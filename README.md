@@ -1,8 +1,8 @@
 # balmain-website
 **Balmain is all about the power of girls and their freedom**
-![Screenshot (11)](https://github.com/haniehtahmaseb/balmain/assets/155815327/f099ae79-0032-4e4b-ba36-29ac1b916fa3)
-![Screenshot (12)](https://github.com/haniehtahmaseb/balmain/assets/155815327/b0bc6df6-d7d0-4b11-a66f-e670ecc8c43d)
-![Screenshot (13)](https://github.com/haniehtahmaseb/balmain/assets/155815327/bdc5424e-f088-4f50-9f3c-87bda2bca425)
+![Screenshot (11)](https://github.com/haniehtahmaseb/balmain-website/assets/155815327/dce1ee28-a641-4a3c-95d4-25e2c7b36eb9)
+![Screenshot (12)](https://github.com/haniehtahmaseb/balmain-website/assets/155815327/c268209f-b1a2-4539-97a0-5b9a0dd76d94)
+![Screenshot (13)](https://github.com/haniehtahmaseb/balmain-website/assets/155815327/0699f5ef-3579-4c58-a8d8-8cb0f9858029)
 
 - [Demo Project]()
 
