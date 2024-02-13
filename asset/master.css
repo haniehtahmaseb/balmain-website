@@ -1,0 +1,1259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    font-family: "Days One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: black;
+    scroll-behavior: smooth;
+    /* *{
+        border: 1px solid white;
+    } */
+    >aside{
+        width: 70px;
+        background-color: #bbb5b5;
+        z-index: 10;
+        >div{
+            width: 100%;
+            height: 100vh;
+            background-color: #1c1c1c;
+            position: sticky;
+            top: 0;
+            left: -70px;
+            >div{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                >*{
+                    color: white;
+                }
+                &:first-of-type{
+                    height: 10%;
+                    display: flex;
+                    justify-content: center;
+                    >label{
+                        width: 50%;
+                        height: 100%;
+                        display: flex;
+                        cursor: pointer;
+                        align-items: center;
+                        >i{
+                            display: inline-block;
+                            width: 70px;
+                            font-size: 25px;
+                            cursor: pointer;
+                            transition: 0.4s;
+                            &:hover{
+                                color: rgb(68, 68, 68);
+                            }
+                        }  
+                    }
+                    >input[type="radio"]{
+                        width: 50%;
+                        display: none;
+                    }
+                    >.submenu{
+                        width: 350px;
+                        height: 100vh;
+                        background-color: #1c1c1c;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        position: fixed;
+                        top: 0;
+                        left: -350px;
+                        >ul{
+                            height: 10%;
+                            width: 100%;
+                            display: flex;
+                            margin-left: 55px;
+                            >li{
+                                height: 100%;
+                                width: fit-content;
+                                >a{
+                                    color:white;
+                                    display: flex;
+                                    height: 100%;
+                                    >i{
+                                        color: white;
+                                        display: flex;
+                                        height: 100%;
+                                        align-items: center;
+                                        transition: .4s;
+                                        &:hover{
+                                            scale: 1.2;
+                                            color: gray;
+                                            opacity: 50%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        >div{
+                            &:nth-of-type(1),&:nth-of-type(3){
+                                height: 40%;
+                                width: 100%;
+                                border-bottom: 1px solid #000000;
+                                >nav{
+                                    height: 100%;
+                                    >ul{
+                                        height: 100%;
+                                        width: 100%;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-items: center;
+                                        >li{
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-around;
+                                            padding-right: 20px;
+                                            >label , a{
+                                                display: inline-block;
+                                                color: white;
+                                                width: 100%;
+                                                text-transform: uppercase;
+                                                line-height: 25px;
+                                                padding-left: 55px;
+                                                font-size: 14px;
+                                                cursor: pointer;
+                                                position: relative;
+                                                &::after{
+                                                    content: '';
+                                                    display: flex;
+                                                    width: 0;
+                                                    height: 2px;
+                                                    position: absolute;
+                                                    top: 30px;
+                                                    left: 55px;
+                                                    background-image: linear-gradient(to right, white,#5c5c5c, #1c1c1c) ;
+                                                    transition: .4s;
+                                                }
+                                                &:hover::after{
+                                                    width: 125px;
+                                                }
+                                                >i{
+                                                    color: white;
+                                                }
+                                            }
+                                            >input[type="radio"]{
+                                                display: none;
+                                                &:checked ~ .row{
+                                                    left: 0;
+                                                    z-index: 15;
+                                                }
+                                            }
+                                            >.row{
+                                                width: 100%;
+                                                height: 90%;
+                                                position: absolute;
+                                                top: 10%;
+                                                left: -350px;
+                                                background-color: #1c1c1c;
+                                                align-content: flex-start;
+                                                >ul{
+                                                    width: 100%;
+                                                    >li{
+                                                        width: 100%;
+                                                        >label , a{
+                                                            color: rgb(68, 68, 68);
+                                                            display: inline-block;
+                                                            width: 80%;
+                                                            text-transform: uppercase;
+                                                            line-height: 40px;
+                                                            padding-left: 55px;
+                                                            font-size: 14px;
+                                                            cursor: pointer;
+                                                            position: relative;
+                                                            &::after{
+                                                                content: '';
+                                                                display: flex;
+                                                                width: 0;
+                                                                height: 2px;
+                                                                position: absolute;
+                                                                top: 30px;
+                                                                left: 55px;
+                                                                background-image: linear-gradient(to right,  rgb(68, 68, 68),#1c1c1c) ;
+                                                                transition: .4s;
+                                                            }
+                                                            &:hover::after{
+                                                                width: 125px;
+                                                            }
+                                                            >i{
+                                                                color: white;
+                                                                width: 20%;
+                                                            }
+                                                        }
+                                                        >input[type="radio"]{
+                                                            display: none;
+                                                            &:checked ~ ul{
+                                                                left: 0;
+                                                                z-index: 15;
+                                                            }
+                                                        } 
+                                                        >ul{
+                                                            width: 100%;
+                                                            height: 100%;
+                                                            position: absolute;
+                                                            top: 0;
+                                                            left: -350px;
+                                                            background-color: #1c1c1c;
+                                                            >li{
+                                                                color: rgb(255, 255, 255);
+                                                                display: inline-block;
+                                                                width: 80%;
+                                                                text-transform: capitalize;
+                                                                line-height: 40px;
+                                                                padding-left: 55px;
+                                                                font-size: 14px;
+                                                                position: relative;
+                                                                &:first-of-type{
+                                                                    color: rgb(68, 68, 68);
+                                                                    position: relative;
+                                                                    &::after{
+                                                                        content: '';
+                                                                        display: flex;
+                                                                        width: 0;
+                                                                        height: 2px;
+                                                                        position: absolute;
+                                                                        top: 30px;
+                                                                        left: 55px;
+                                                                        background-image: linear-gradient(to right, rgb(68, 68, 68),#1c1c1c) ;
+                                                                        transition: .4s;
+                                                                    }
+                                                                    &:hover::after{
+                                                                        width: 125px;
+                                                                    }
+                                                                }
+                                                                &::after{
+                                                                    content: '';
+                                                                    display: flex;
+                                                                    width: 0;
+                                                                    height: 2px;
+                                                                    position: absolute;
+                                                                    top: 30px;
+                                                                    left: 55px;
+                                                                    background-image: linear-gradient(to right, white,#5c5c5c, #1c1c1c) ;
+                                                                    transition: .4s;
+                                                                }
+                                                                &:hover::after{
+                                                                    width: 125px;
+                                                                }
+                                                            }
+                                                        }  
+                                                    }
+                                                    &:first-of-type{
+                                                        border-bottom: 1px solid black;
+                                                    }
+                                                    &:first-of-type>li>:is(label , a){
+                                                        color: rgb(255, 255, 255);
+                                                        position: relative;
+                                                        &::after{
+                                                            content: '';
+                                                            display: flex;
+                                                            width: 0;
+                                                            height: 2px;
+                                                            position: absolute;
+                                                            top: 30px;
+                                                            left: 55px;
+                                                            background-image: linear-gradient(to right, white,#5c5c5c, #1c1c1c) ;
+                                                            transition: .4s;
+                                                        }
+                                                        &:hover::after{
+                                                            width: 125px;
+                                                        }
+                                                    } 
+                                                }
+                                            }
+                                        }
+            
+                                    }
+                                }
+                            }
+                            &:nth-of-type(2){
+                                height: 30%;
+                                width: 100%;
+                                border-bottom: 1px solid #000000;
+                                padding-left: 55px;
+                                >nav{
+                                    >ul{
+                                        padding-top: 20px;
+                                        display: flex;
+                                        justify-content: start;
+                                        >li{
+                                            >a{
+                                                color: rgb(68, 68, 68);
+                                                position: relative;
+                                                &::after{
+                                                    content: '';
+                                                    display: flex;
+                                                    width: 0;
+                                                    height: 2px;
+                                                    position: absolute;
+                                                    top: 30px;
+                                                    background-image: linear-gradient(to right, rgb(68, 68, 68),#1c1c1c) ;
+                                                    transition: .4s;
+                                                }
+                                                &:hover::after{
+                                                    width: 125px;
+                                                }
+                                            }     
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-of-type(3){
+                                height: 20%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                width: 100%;
+                                align-content: center;
+                                >a{
+                                    color: rgb(68, 68, 68);
+                                    display: flex;
+                                    width: 100%;
+                                    text-transform: uppercase;
+                                    font-size: 15px;
+                                    padding-left: 55px;
+                                    line-height: 30px;
+                                    transition: .4s;
+                                    &:hover{
+                                        font-size: 18px;
+                                    }
+                                    &:hover>i{
+                                        font-size: 23px;
+                                    }
+                                    >i{
+                                        padding-right: 10px;
+                                        font-size: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:last-of-type{
+                    height: 90%;
+                    align-content: center;
+                    >a{
+                        display: flex;
+                        height: 45px;
+                        >i{
+                            display: flex;
+                            width: 70px;;
+                            height: 70px;
+                            justify-content: center;
+                            align-items: center;
+                            flex-wrap: wrap;
+                            transition: .4s;
+                            &:hover{
+                                color: rgb(68, 68, 68);
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        >div>div>input[type="radio"]:checked ~ .submenu{
+            left: 0;
+        }
+    /* end of header */
+    }
+    /* end aside */
+    >section{
+        width: calc(100% - 70px);
+        transition: 0.4s;
+        /* background-color: #000000; */
+        >nav{
+            width: inherit;
+            height: 120px;
+            position: fixed;
+            top: 0;
+            right: 0;
+            display: flex;
+            justify-content: end;
+            z-index: 10;
+            >figure{
+                width: 12.5%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >img{
+                    width: 100%;
+                    /* height: 100%; */
+                    object-fit: cover;
+                    filter: invert(100%);
+                }
+            }
+        }
+        /* top nav */
+        >.row{
+            margin-top: 120px;
+            justify-content: center;
+            >.slider1{
+                width: 95%;
+                height: 600px;
+                border-radius: 20px;
+                overflow: hidden;
+                >figure{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    >img{
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                    >figcaption{
+                        width: 25%;
+                        >*{
+                            width: inherit;
+                            position: absolute;
+                            left: 30px;
+                            display: flex;
+                            text-transform: uppercase;
+                        }
+                        >p{
+                            top: 450px;
+                            font-size: 20px;
+                            color: white;
+                            text-shadow: 0px 1px 5px rgb(0, 0, 0);
+                        }
+                        >div{
+                            width: 125px;
+                            height: 30px;
+                            top: 500px;
+                            >a{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                line-height: 20px;
+                                font-size: 10px;
+                                color: black;
+                                background-color: white;
+                                border-radius: 20px;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                &:hover::after{
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                                &::after{
+                                    content: '';
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #1c1c1c79;
+                                    width: 0;
+                                    height: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    border-radius: 20px;
+                                    transition: 0.4s;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+            /* slider1 */
+            >.shopping{
+                width: 95%;
+                height: 500px;
+                border-radius: 20px;
+                margin-top: 130px;
+                >div{
+                    width: 100%;
+                    height: 50px;
+                    >h3{
+                        color: white;
+                        line-height: 50px;
+                        text-transform: uppercase;
+                    }
+                }
+                >.row{
+                    height: 450px;
+                    justify-content: space-between;
+                    >div{
+                        width: 24%;
+                        height: 100%;
+                        border-radius: 20px;
+                        background-color: #1c1c1c;
+                        position: relative;
+                        &:hover>div{
+                            height: 550px;
+                        }
+                        &:hover>figure{
+                            opacity: 0;
+                        }
+                        >div{
+                            width: 100%;
+                            height: 0;
+                            border-radius: 20px;
+                            overflow: hidden;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            transform: translate(-50%,-50%);
+                            transition: .4s ease-out;
+                            >figure{
+                                width: 100%;
+                                height: 100%;
+                                position: relative;
+                                /* transition: .4s; */
+                                >img{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                }
+                            }
+                        }
+                        >figure{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            >img{
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                            >figcaption{
+                                width: 100%;
+                                >*{
+                                    width: inherit;
+                                    position: absolute;
+                                    left: 30px;
+                                    display: flex;
+                                    text-transform: uppercase;
+                                }
+                                >p{
+                                    top: 380px;
+                                    color: white;
+                                    text-shadow: 0px 1px 5px rgb(0, 0, 0);
+                                    font-size: 10px;
+                                }
+                                >div{
+                                    width: 75px;
+                                    height: 20px;
+                                    top: 400px;
+                                    >a{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        line-height: 10px;
+                                        font-size: 5px;
+                                        color: black;
+                                        background-color: white;
+                                        border-radius: 20px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        &:hover::after{
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                        &::after{
+                                            content: '';
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background-color: #1c1c1c79;
+                                            width: 0;
+                                            height: 0;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%,-50%);
+                                            border-radius: 20px;
+                                            transition: 0.4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            >.slider2{
+                width: 95%;
+                height: 600px;
+                border-radius: 20px;
+                margin-top: 180px;
+                .row{
+                    height: 100%;
+                    justify-content: space-between;
+                    >div{
+                        width: 49%;
+                        height: 100%;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        >figure{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            >img{
+                                width: 100%;
+                                object-fit: cover;
+                                transition: 0.4s;
+                                &:hover{
+                                    transform: scale(1.1)
+                                }
+                            }
+                            >figcaption{
+                                width: 25%;
+                                >*{
+                                    width: inherit;
+                                    position: absolute;
+                                    left: 30px;
+                                    display: flex;
+                                    text-transform: uppercase;
+                                }
+                                >p{
+                                    top: 450px;
+                                    color: white;
+                                    text-shadow: 0px 1px 5px rgb(0, 0, 0);
+                                }
+                                >div{
+                                    width: 125px;
+                                    height: 30px;
+                                    top: 500px;
+                                    >a{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        line-height: 20px;
+                                        font-size: 10px;
+                                        color: black;
+                                        background-color: white;
+                                        border-radius: 20px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        &:hover::after{
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                        &::after{
+                                            content: '';
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background-color: #1c1c1c79;
+                                            width: 0;
+                                            height: 0;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%,-50%);
+                                            border-radius: 20px;
+                                            transition: 0.4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* slider2 */
+            .bgfix{
+                width: 100%;
+                height: 100vh;
+                background-image: url(img/bag.avif);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                position: relative;
+                >div{
+                    width: 25%;
+                    >*{
+                        width: inherit;
+                        position: absolute;
+                        left: 30px;
+                        display: flex;
+                        text-transform: uppercase;
+                    }
+                    >p{
+                        top: 50%;
+                        color: white;
+                        text-shadow: 0px 1px 5px rgb(0, 0, 0);
+                        font-size: 60px;
+                    }
+                    >div{
+                        width: 125px;
+                        height: 30px;
+                        top: 60%;
+                        >a{
+                            width: 100%;
+                            height: 100%;
+                            display: flex;
+                            line-height: 20px;
+                            font-size: 10px;
+                            color: black;
+                            background-color: white;
+                            border-radius: 20px;
+                            justify-content: center;
+                            align-items: center;
+                            &:hover::after{
+                                height: 100%;
+                                width: 100%;
+                            }
+                            &::after{
+                                content: '';
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                background-color: #1c1c1c79;
+                                width: 0;
+                                height: 0;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%,-50%);
+                                border-radius: 20px;
+                                transition: 0.4s;
+                            }
+                        }
+                    }
+                }
+
+            }
+            /* bgfix */
+            >.slider3{
+                width: 95%;
+                height: 600px;
+                border-radius: 20px;
+                .row{
+                    height: 100%;
+                    justify-content: space-between;
+                    >div{
+                        width: 49%;
+                        height: 100%;
+                        border-radius: 20px;
+                        overflow: hidden;
+                        >figure{
+                            width: 100%;
+                            height: 100%;
+                            position: relative;
+                            >img{
+                                width: 100%;
+                                object-fit: cover;
+                                transition: 0.4s;
+                                &:hover{
+                                    transform: scale(1.1)
+                                }
+                            }
+                            >figcaption{
+                                width: 100%;
+                                >*{
+                                    width: inherit;
+                                    position: absolute;
+                                    left: 30px;
+                                    display: flex;
+                                    text-transform: uppercase;
+                                }
+                                >p{
+                                    top: 450px;
+                                    color: white;
+                                    text-shadow: 0px 1px 5px rgb(0, 0, 0);
+                                }
+                                >div{
+                                    width: 125px;
+                                    height: 30px;
+                                    top: 500px;
+                                    >a{
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        line-height: 20px;
+                                        font-size: 10px;
+                                        color: black;
+                                        background-color: white;
+                                        border-radius: 20px;
+                                        justify-content: center;
+                                        align-items: center;
+                                        position: relative;
+                                        &:hover::after{
+                                            height: 100%;
+                                            width: 100%;
+                                        }
+                                        &::after{
+                                            content: '';
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            background-color: #1c1c1c79;
+                                            width: 0;
+                                            height: 0;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            transform: translate(-50%,-50%);
+                                            border-radius: 20px;
+                                            transition: 0.4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* slider3 */
+            .signup{
+                width: 95%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: #1c1c1c;
+                margin-top: 100px;
+                overflow: hidden;
+                .row{
+                    height: 100%;
+                    >div{
+                        width: 50%;
+                        height: 100%;
+                        &:first-of-type{
+                            height: 100%;
+                            >*{
+                                width: 90%;
+                                margin: 30px;
+                            }
+                            >h3,h6{
+                                text-transform: uppercase;
+                                color: white;
+                            }
+                            >p{
+                                text-transform: capitalize;
+                                color: gray;
+                                font-size: 12px;
+                            }
+                        }
+                        &:last-of-type{
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            >form{
+                                width: 90%;
+                                height: 90%;
+                                background-color: #222222;
+                                border-radius: 20px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: center;
+                                justify-content: center;
+                                div{
+                                    width: 100%;
+                                    &:first-of-type{
+                                        >h5{
+                                            text-transform: uppercase;
+                                            color: white;
+                                            display: flex;
+                                            width: 100%;
+                                            line-height: 40px;
+                                            margin-left: 30px;
+                                        }
+                                        >.radio{
+                                            display: flex;
+                                            align-items: center;
+                                            width: 50%;
+                                            margin-left: 30px;
+                                            >.radio-button{
+                                                display: flex;
+                                                position: relative;
+                                                cursor: pointer;
+                                                >.input {
+                                                    position: absolute;
+                                                    opacity: 0;
+                                                    width: 0;
+                                                    height: 0;
+                                                    &:checked ~ .label{
+                                                        color: gray;
+                                                    }
+                                                    &:checked ~ .label>.custom{
+                                                        transform: translateY(-50%) scale(0.8);
+                                                        border: 5px solid white;
+                                                        color: white;
+                                                    }
+                                                }
+                                                >.label {
+                                                    display: flex;
+                                                    padding-left: 30px;
+                                                    margin: 25px 0;
+                                                    position: relative;
+                                                    font-size: 14px;
+                                                    color: white;
+                                                    cursor: pointer;
+                                                    transition: .4s;
+                                                    &:hover>.custom{
+                                                        transform: translateY(-50%) scale(1.2);
+                                                        border-color: white;
+                                                        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+                                                    }
+                                                    >.custom {
+                                                        position: absolute;
+                                                        top: 50%;
+                                                        left: 0;
+                                                        transform: translateY(-50%);
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        border-radius: 50%;
+                                                        border: 2px solid #555;
+                                                        transition: .4s;
+                                                    } 
+                                                } 
+                                            }
+                                        } 
+                                    }
+                                    &:last-of-type{
+                                        >.mail-label{
+                                            text-transform: uppercase;
+                                            color: white;
+                                            display: flex;
+                                            width: 100%;
+                                            line-height: 40px;
+                                            margin-left: 30px;
+                                            font-size: 12px;
+                                            display: flex;
+                                            position: relative;
+                                        }
+                                        >.mail-input{
+                                            opacity: 0;
+                                            width: 0;
+                                            height: 0;
+                                        }
+                                        >span{
+                                            width: 60%;
+                                            height: 30px;
+                                            background-color: #222222;
+                                            border-bottom: 1px solid white;
+                                            margin: 20px 10px 20px 20px;
+                                            display: inline-block;
+                                            color: #5c5c5c;
+                                            font-size: 12px;
+                                            text-transform: capitalize;
+                                        }
+                                        >.button{
+                                            width: 180px;
+                                            height: 40px;
+                                            border-radius: 40px;
+                                            background-color: white;
+                                            display: inline-block;
+                                            >a{
+                                                width: 100%;
+                                                height: 100%;
+                                                display: flex;
+                                                line-height: 20px;
+                                                font-size: 10px;
+                                                color: black;
+                                                background-color: white;
+                                                border-radius: 20px;
+                                                justify-content: center;
+                                                align-items: center;
+                                                position: relative;
+                                                &:hover::after{
+                                                    height: 100%;
+                                                    width: 100%;
+                                                }
+                                                &::after{
+                                                    content: '';
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    background-color: #1c1c1c79;
+                                                    width: 0;
+                                                    height: 0;
+                                                    position: absolute;
+                                                    top: 50%;
+                                                    left: 50%;
+                                                    transform: translate(-50%,-50%);
+                                                    border-radius: 20px;
+                                                    transition: 0.4s;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* signup */
+            .policy{
+                width: 95%;
+                height: 300px;
+                margin-top: 100px;
+                >.row{
+                    height: 100%;
+                    justify-content: space-between;
+                    >div{
+                        width: 32%;
+                        height: 100%;
+                        border-radius: 20px;
+                        background-color: #1c1c1c;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        align-content: center;
+                        >h4{
+                            color:white;
+                            text-transform: uppercase;
+                            display: flex;
+                            justify-content: center;
+                            width: 100%;
+                            line-height: 80px;
+                        }
+                        >p{
+                            color: white;
+                            text-transform: capitalize;
+                            font-size: 10px;
+                            display: flex;
+                            width: 100%;
+                            text-align: center;
+                            justify-content: center;
+                            line-height: 20px;
+                        }
+                        >div{
+                            width: 175px;
+                            height: 40px;
+                            margin-top: 40px;
+                            >a{
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                line-height: 20px;
+                                font-size: 11px;
+                                color: black;
+                                background-color: white;
+                                border-radius: 40px;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                &:hover::after{
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                                &::after{
+                                    content: '';
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    background-color: #1c1c1c79;
+                                    width: 0;
+                                    height: 0;
+                                    position: absolute;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    border-radius: 20px;
+                                    transition: 0.4s;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* policy */
+            >.logo{
+                width: 95%;
+                height: 250px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                >figure{
+                    width: 100%;
+                    height: 100%;
+                    >a{
+                        display: flex;
+                        justify-content: center;
+                        align-content: center;
+                        height: 100%;
+                        width: 100%;
+                        >img{
+                            object-fit: cover;
+                            transform: scale(.30);
+                        }
+                    }
+                }
+            }
+            /* logo */
+            >.social{
+                width: 95%;
+                height: 180px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                >.row{
+                    height: 100%;
+                    justify-content: center;
+                    align-items: center;
+                    >ul{
+                        width: 15%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        >li{
+                            >a{
+                                color:white;
+                                transition: .04s;
+                                >i{
+                                    color: inherit;
+                                    font-size: 18px;
+                                }
+                                &:hover{
+                                    color: gray;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* social */
+            >.foot{
+                width: 95%;
+                height: 500px;
+                .row{
+                    height: 100%;
+                    >div{
+                        width: 100%;
+                        &:first-of-type{
+                            height: 150px;
+                            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                            >.row{
+                                height: 100%;
+                                justify-content: space-between;
+                                >ul{
+                                    width: 50%;
+                                    height: 100%;
+                                    display: flex;
+                                    &:last-of-type{
+                                        width: 25%;
+                                    }
+                                    >li{
+                                        color: white;
+                                        font-size: 10px;
+                                        display: flex;
+                                        flex-grow: 1;
+                                        margin-top: 30px;
+                                        text-transform: uppercase;
+                                        >a{
+                                            color:white;
+                                            text-transform: uppercase;
+                                            font-size: 10px;
+                                            position: relative;
+                                            &:hover::after{
+                                                width: 100%;
+                                                left: 0;
+                                            }
+                                            &::after{
+                                                content: '';
+                                                display: flex;
+                                                width: 0;
+                                                height: 1px;
+                                                position: absolute;
+                                                top: 12px;
+                                                left: 50%;
+                                                background-color: #fff;
+                                                transition: .4s;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:last-of-type{
+                            height: 350px;
+                            >.row{
+                                height: 100%;
+                                background-color: rgb(0, 0, 0);
+                                justify-content: space-evenly;
+                                padding: 20px 0 10px 50px;
+                                display: flex;
+                                flex-wrap: wrap;
+                                width: 100%;
+                                align-content: center;
+                                >figure{
+                                    width: 20%;
+                                    height: 100%;
+                                    border: 5px solid #4444445f;
+                                    border-radius: 44% 56% 70% 30% / 69% 37% 63% 31% ;
+                                    outline: 10px solid #29292936;
+                                    outline-offset: 5px;
+                                    overflow: hidden;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: start;
+                                    box-shadow: 20px 20px 100px rgb(0, 0, 0);
+                                    >img{
+                                        width: 100%;
+                                        object-fit: cover;
+                                        filter:opacity(70%);
+                                        transition: .4s;
+                                        &:hover{
+                                            filter:opacity(100%);
+                                            width: 105%;
+                                        }
+                                    }
+                                }
+                                >ul{
+                                    width: 30%;
+                                    height: 100%;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    justify-content: center;
+                                    align-content: center;
+                                    >li{
+                                        list-style-type: none;
+                                        width: 100%;
+                                        display: flex;
+                                        transition: 0.4s;
+                                        &:hover>*{
+                                            color: #5c5c5c;
+                                            font-size: 12px;
+                                        }
+                                        >i{
+                                            color: rgb(255, 255, 255);
+                                            font-size: 17px;
+                                            display: flex;justify-content: center;
+                                        }
+                                        >a{
+                                            text-transform: capitalize;
+                                            text-decoration: none;
+                                            color: rgb(255, 255, 255);
+                                            display: flex;
+                                            width: 100%;
+                                            height: 100%;
+                                            line-height: 30px;
+                                            align-items: center;
+                                            padding-left: 10px;
+                                            font-size: 14px;
+                                            transition: .4s;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            /* footer */
+        }
+    }
+    /* end of body */
+}
